@@ -34,13 +34,6 @@
 
     " 搜索正则匹配规则改变 见帮助 :h magic
     set magic
-    " 空格键进入搜索模式
-    map <space> /
-    " 搜索模式为默认更先进的正则规则 见帮助 :h magic
-    nnoremap / /\v
-    vnoremap / /\v
-    " 去掉搜索高亮
-    noremap <silent><leader>/ :nohls<CR>
 
     " encoding 文件编码,格式 {
         " 设置文件格式
@@ -98,21 +91,6 @@
 
         " 回车即选中当前项
         inoremap <expr> <CR>       pumvisible() ? "\<c-y>" : "\<cr>"
-
-        " In the quickfix window, <CR> is used to jump to the error under the
-        " cursor, so undefine the mapping there.
-        autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
-        " quickfix window  s/v to open in split window,  ,gd/,jd => quickfix window => open it
-        autocmd BufReadPost quickfix nnoremap <buffer> v <C-w><Enter><C-w>L
-        autocmd BufReadPost quickfix nnoremap <buffer> s <C-w><Enter><C-w>K
-        " command-line window
-        autocmd CmdwinEnter * nnoremap <buffer> <CR> <CR>
-
-        " 上下左右键的行为 会显示其他信息
-        inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
-        inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
-        inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
-        inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 
         " 打开自动定位到最后编辑的位置, 需要确认 .viminfo 当前用户可写
         if has("autocmd")
@@ -278,6 +256,17 @@
     map <C-h> <C-W>h
     map <C-l> <C-W>l
 
+    " 空格键进入搜索模式
+    map <space> /
+    " 搜索模式为默认更先进的正则规则 见帮助 :h magic
+    nnoremap / /\v
+    vnoremap / /\v
+    " 去掉搜索高亮
+    noremap <silent><leader>/ :nohls<CR>
+    " # 正向搜索光标下单词,* 反向搜索光标下单词
+    nnoremap # *
+    nnoremap * #
+
     " http://stackoverflow.com/questions/13194428/is-better-way-to-zoom-windows-in-vim-than-zoomwin
     " Zoom / Restore window.
     function! s:ZoomToggle() abort
@@ -308,12 +297,8 @@
     " tab切换
     map <leader>th :tabfirst<cr>
     map <leader>tl :tablast<cr>
-
-    map <leader>tj :tabnext<cr>
-    map <leader>tk :tabprev<cr>
     map <leader>tn :tabnext<cr>
     map <leader>tp :tabprev<cr>
-
     map <leader>te :tabedit<cr>
     map <leader>td :tabclose<cr>
     map <leader>tm :tabm<cr>
