@@ -5,8 +5,8 @@
 " }
 
 " Initialize the plugin 初始化插件 {
-    if filereadable(expand("~/.vimrc.vundle"))
-      source ~/.vimrc.vundle
+    if filereadable(expand("~/.vimrc.bundles"))
+      source ~/.vimrc.bundles
     endif
 " }
 
