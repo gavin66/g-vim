@@ -54,7 +54,7 @@ map <Down> <Nop>
 
 
 # F 功能键位
-F1 						" 废弃这个键,防止调出系统帮助
+F1 					    " 废弃这个键,防止调出系统帮助
 F2 set nu/nonu 			" 行号开关，用于鼠标复制代码用
 F3 set list/nolist 		" 显示可打印字符开关
 F4 set wrap/nowrap 		" 换行开关
@@ -78,24 +78,24 @@ ctrl + j/k/h/l   进行上下左右窗口跳转,不需要 ctrl+w+jkhl
 
 # tab 操作
 ctrl + t " 新建一个tab
-,th    	" 切换到第1个tab
-,tl    	" 切换到最后一个tab
-,tn    	" 下一个tab
-,tp    	" 前一个tab
-,td    	" 关闭tab
-,te    	" tab edit
-,tm    	" tabm
-,1     	" 切换到第1个tab
-,2     	" 切换到第2个tab
-,3     	" 切换到第2个tab
-,4     	" 切换到第2个tab
-,5     	" 切换到第2个tab
-,6     	" 切换到第2个tab
-,7     	" 切换到第2个tab
-,8     	" 切换到第2个tab
-,9     	" 切换到第9个tab
-,0     	" 切换到最后一个tab
-,tt 	" 最近使用两个tab之间切换
+,th    	 " 切换到第1个tab
+,tl    	 " 切换到最后一个tab
+,tn    	 " 下一个tab
+,tp    	 " 前一个tab
+,td    	 " 关闭tab
+,te    	 " tab edit
+,tm    	 " tabm
+,1     	 " 切换到第1个tab
+,2     	 " 切换到第2个tab
+,3     	 " 切换到第2个tab
+,4     	 " 切换到第2个tab
+,5     	 " 切换到第2个tab
+,6     	 " 切换到第2个tab
+,7     	 " 切换到第2个tab
+,8     	 " 切换到第2个tab
+,9     	 " 切换到第9个tab
+,0     	 " 切换到最后一个tab
+,tt 	 " 最近使用两个tab之间切换
 
 " 其他
 Y         " 复制到行尾,等同于y$
